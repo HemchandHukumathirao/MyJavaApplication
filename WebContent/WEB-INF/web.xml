@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Tennis2Play</display-name>
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.controller.LoginServlet</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/test</url-pattern>
+
+	</servlet-mapping>
+
+
+<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>com.controller.RegisterServlet</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/login</url-pattern>
+
+	</servlet-mapping>
+
+
+</web-app>

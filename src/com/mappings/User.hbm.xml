@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+	<class name="com.entity.User" table="USER">
+		<id name="userid" column="U_ID">
+
+		</id>
+		<property name="firstname" column="FIRST_NAME"></property>
+		<property name="lastname" column="LAST_NAME"></property>
+		<property name="username" column="USER_NAME"></property>
+		<property name="password" column="PASSWORD"></property>
+
+	</class>
+	
+</hibernate-mapping>
