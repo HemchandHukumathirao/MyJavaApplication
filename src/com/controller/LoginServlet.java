@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.GenericServlet;
 import javax.servlet.RequestDispatcher;
@@ -16,7 +17,10 @@ public class LoginServlet extends GenericServlet {
 
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-RequestDispatcher rd = null;
+		res.setContentType("text/html");
+		PrintWriter pw = res.getWriter();
+		
+		RequestDispatcher rd = null;
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 
@@ -29,10 +33,12 @@ RequestDispatcher rd = null;
 
 		if (flag) {
 			rd = req.getRequestDispatcher("home.html");
-			rd.forward(req,res);
-		} else {
-			rd = req.getRequestDispatcher("login.html");
 			rd.forward(req, res);
+		} else {
+			
+			pw.println("please try again ");
+				
+
 		}
 
 	}
